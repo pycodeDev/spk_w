@@ -169,6 +169,12 @@ class Admin extends CI_Controller{
         $this->load->view('admin/perangkingan/hasil',$data);
     }
 
+    public function cobaa(){
+        $a = $this->db->select("nama_kriteria,id_kriteria")->order_by('rank','asc')->get("t_kriteria")->result_array();
+        $data['a'] = $a;
+        $this->load->view('admin/test',$data);
+    }
+
     public function print(){
         $image1 = base_url("assets/img/header.png");
 		$pdf = new FPDF('p','mm','A4');

@@ -252,7 +252,7 @@ class Crud_model extends CI_Model
             $data = array(
                 "bobot" => $post[$test]
             );
-            $this->db->update("t_perangkingan", $data, array("id_alternatif" => $post["id_alternatif"], "id_kriteria" => $a[$i]));
+            $this->db->update("t_perangkingan", $data, array("id_alternatif" => $post["id_alternatif"], "id_kriteria" => $a[$i]['id_kriteria']));
         }
 
     }
