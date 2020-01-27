@@ -1,9 +1,10 @@
 ###################
 Decission Support System 
 ###################
-
-Algorithm SMARTER
-Framework CI 
-PHP 7
+<ul>
+<li>Algorithm SMARTER</li>
+<li>Framework CI </li>
+<li>PHP 7 </li>
+</ul>
 
 PycodeDev
