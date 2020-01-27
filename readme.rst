@@ -1,7 +1,7 @@
 ###################
 Decission Support System 
 ###################
-<ul>
+<br/>
 	<li>Algorithm SMARTER</li>
 	<li>Framework CI </li>
 	<li>PHP 7 </li>
