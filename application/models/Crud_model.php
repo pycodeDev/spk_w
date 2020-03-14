@@ -265,14 +265,21 @@ class Crud_model extends CI_Model
     public function d_krit()
     {
         // return $this->db->delete("t_kriteria", array("id_kriteria" => $id));
-        return $this->db->query('TRUNCATE TABLE t_kriteria');
+        $this->db->query('TRUNCATE TABLE t_kriteria');
+        $this->db->query('TRUNCATE TABLE t_sub_kriteria');
+        $this->db->query('TRUNCATE TABLE t_perangkingan');
+        return $this->db->query('TRUNCATE TABLE t_hasil');
     }
     public function d_sub_krit($id)
     {
+        $this->db->query('TRUNCATE TABLE t_perangkingan');
+        $this->db->query('TRUNCATE TABLE t_hasil');
         return $this->db->delete("t_sub_kriteria", array("id_kriteria" => $id));
     }
     public function d_alter($id)
     {
+        $this->db->query('TRUNCATE TABLE t_perangkingan');
+        $this->db->query('TRUNCATE TABLE t_hasil');
         return $this->db->delete("t_alternatif", array("id_alternatif" => $id));
     }
     public function d_perangkingan($id)

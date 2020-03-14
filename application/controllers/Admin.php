@@ -21,6 +21,7 @@ class Admin extends CI_Controller{
         $krit = $this->crud_model;
         $data['title'] = "Kelola Kriteria";
         $data['krit'] = $krit->getAll('t_kriteria');
+        $data['count'] = count($data['krit']);
         $data['abcd'] = $krit->test();
         $this->load->view('admin/kel_krit/index',$data);
     }

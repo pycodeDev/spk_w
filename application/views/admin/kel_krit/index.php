@@ -33,12 +33,24 @@
                                             <h6 class="m-1 font-weight-bold text-success float left">Kelola Kriteria</h6>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="<?=base_url();?>admin/tambah_kriteria" class="float-right btn btn-sm btn-success" style="color:#fff;"><i class="fas fa-plus"></i> Tambah Data</a>
+                                        <?php
+                                            if ($count <1) {?>
+                                            <a href="<?=base_url();?>admin/tambah_kriteria" class="float-right btn btn-sm btn-success" style="color:#fff;"><i class="fas fa-plus"></i> Tambah Data </a>
+                                        <?php    
+                                            }
+                                        ?> 
+                                            
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <a href="<?=base_url()?>admin/del_krit" class="mb-3 btn btn-sm btn-danger" style="color:#fff"><i class="fas fa-trash-alt"></i> Hapus    </a>
+                                    <?php
+                                        if ($count > 0) {?>
+                                            <a href="<?=base_url()?>admin/del_krit" class="mb-3 btn btn-sm btn-danger" style="color:#fff"><i class="fas fa-trash-alt"></i> Hapus    </a>
+                                        <?php    
+                                            }
+                                        ?> 
+                                    
                                     <div class="table-responsive">
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                             <thead>
